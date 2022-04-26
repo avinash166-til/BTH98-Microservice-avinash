@@ -21,11 +21,19 @@ public class SirNames {
 		for(String x:nm2)
 		{
 			nm1.stream().map(y->y+" "+x).forEach(y->System.out.println(y));
-			return;
+			
 			
 		}
+		
 	
-	
+		
+		System.out.println("\n\nSharma family\n");
+		
+	for(String y:nm2)
+	{
+		nm1.stream().map(x-> x+" " +"sharma").forEach(x->System.out.println(x));
+		return;
+	}
 	
 
 	}
