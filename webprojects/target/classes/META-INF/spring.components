@@ -1,0 +1,2 @@
+com.project.webprojects.App=org.springframework.stereotype.Component
+com.project.webprojects.GreetingController=org.springframework.stereotype.Component
