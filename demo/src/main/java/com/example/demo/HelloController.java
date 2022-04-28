@@ -1,9 +1,9 @@
 package com.example.demo;
 
-import org.springframework.stereotype.Controller;
+//import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
+//import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 //@Controller
@@ -22,7 +22,7 @@ public class HelloController {
 		return "tools " ;
 	}
 	
-	@RequestMapping("/student/{name}/{id}")
+	@RequestMapping("/student1/{name}/{id}")
 	
 	String inputs(@PathVariable String name, @PathVariable Long id )
 	{
@@ -47,6 +47,7 @@ public class HelloController {
 	
 	}
 	
+	
 	@RequestMapping("/div/{a}/{b}")
 	
 	int calculate2(@PathVariable int a, @PathVariable int b)
@@ -55,12 +56,31 @@ public class HelloController {
 	return a/b ;
 	}
 	
-	@RequestMapping("grade/{a}/{b}/{c}")
+	@RequestMapping("grade1/{a}/{b}/{c}")
 	
-	int grade(@PathVariable int a,@PathVariable int b,@PathVariable int c)
+	int grade1(@PathVariable int a,@PathVariable int b,@PathVariable int c)
 	{
 		return a+b+c;
 	}
+	
+	
+	@RequestMapping("/Maths1/{a}/{b}")
+	
+	String Maths1(@PathVariable Long a, @PathVariable Long b)
+	
+	{
+	return "addition= "+(a+b)+" subtract  ="+(a-b)+" division ="+(a/b)+" \nmultiplication ="+(a*b) ;
+	
+	}
+	
+	@RequestMapping("/Student/{marks}/{name}")
+	
+		String grade(@PathVariable int marks, @PathVariable String name)
+		{
+		Student st= new Student(marks,name);
+				 return st.grade();
+		//return "Student name is"+name+" Grade "+marks;
+		}
 	
 	}
 	
